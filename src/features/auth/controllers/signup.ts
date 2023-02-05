@@ -13,8 +13,10 @@ import HTTP_STATUS from 'http-status-codes';
 import { IUserDocument } from '@user/interfaces/user.interface';
 import { UserCache } from '@service/redis/user.cache';
 import { omit } from 'lodash';
+import JWT from 'jsonwebtoken';
 import { authQueue } from '@service/queues/auth.queue';
 import { userQueue } from '@service/queues/user.queue';
+import { config } from '@root/config';
 
 const userCache: UserCache = new UserCache();
 
@@ -53,14 +55,31 @@ export class SignUp {
     await userCache.saveUserToCache(`${userObjectId}`, uId, userDataForCache);
 
     // Add to database
-    omit(userDataForCache, ['uId', 'username', 'email', 'avatarColor', 'password']);
-    authQueue.addAuthUserJob('addAuthUserToDB', { value: userDataForCache });
-    userQueue.addUserJob('addUserToDB', { value: userDataForCache });
+    const userResult = omit(userDataForCache, ['uId', 'username', 'email', 'avatarColor', 'password']);
+    authQueue.addAuthUserJob('addAuthUserToDB', { value: authData });
+    userQueue.addUserJob('addUserToDB', { value: userResult });
+
+    const userJwt: string = SignUp.prototype.signupToken(authData, userObjectId);
+    req.session = { jwt: userJwt };
 
     res.status(HTTP_STATUS.CREATED).json({
       message: 'User created successfully',
-      authData
+      user: userDataForCache,
+      token: userJwt
     });
+  }
+
+  private signupToken(data: IAuthDocument, userObjectId: ObjectId): string {
+    return JWT.sign(
+      {
+        userId: userObjectId,
+        uId: data.uId,
+        username: data.username,
+        email: data.email,
+        avatarColor: data.avatarColor
+      },
+      config.JWT_TOKEN!
+    );
   }
 
   private signupData(data: ISignUpData): IAuthDocument {

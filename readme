@@ -1,1 +1,2 @@
 # sudo redis-server --daemonize yes
+# redis-commander
