@@ -1,0 +1,9 @@
+# sudo redis-server --daemonize yes
+
+# redis-commander
+
+# npm run lint:check
+
+# npm run prettier:check
+
+# npm run prettier:fix
