@@ -103,6 +103,7 @@ export class ChServer {
     const subClient = pubClient.duplicate();
     await Promise.all([pubClient.connect(), subClient.connect()]);
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     io.adapter(createAdapter(pubClient, subClient) as any);
     return io;
   }
@@ -115,6 +116,7 @@ export class ChServer {
     });
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   private socketIOConnections(io: Server): void {
     log.info('socketIoConnection');
   }
