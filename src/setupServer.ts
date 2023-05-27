@@ -3,6 +3,7 @@ import { Application, json, urlencoded, Response, Request, NextFunction } from '
 import cors from 'cors';
 import helmet from 'helmet';
 import hpp from 'hpp';
+import bodyParser from 'body-parser';
 import cookierSession from 'cookie-session';
 import HTTP_STATUS from 'http-status-codes';
 import compression from 'compression';
@@ -18,7 +19,7 @@ import http from 'http';
 import { CustomError, IErrorResponse } from '@global/helpers/error-handler';
 
 const SERVER_PORT = 8000;
-const log: Logger = config.createLogger('sever');
+const log: Logger = config.createLogger('severs');
 
 export class ChServer {
   private app: Application;
@@ -47,6 +48,8 @@ export class ChServer {
 
     app.use(hpp());
     app.use(helmet());
+    app.use(bodyParser.json());
+    app.use(bodyParser.urlencoded({ extended: true }));
     app.use(
       cors({
         origin: config.CLIENT_URL,
@@ -73,7 +76,6 @@ export class ChServer {
     });
 
     app.use((error: IErrorResponse, _req: Request, res: Response, next: NextFunction) => {
-      log.error(error);
       if (error instanceof CustomError) {
         return res.status(error.statusCode).json(error.serializeErrors());
       }
@@ -88,7 +90,7 @@ export class ChServer {
       this.startHttpServer(httpServer);
       this.socketIOConnections(socketIO);
     } catch (error) {
-      log.error(error);
+      log.error(`${error} ==<>`);
     }
   }
 

@@ -7,14 +7,14 @@ import { AuthPayload } from '@auth/interfaces/auth.interface';
 export class AuthMiddleware {
   public verifyUser(req: Request, res: Response, next: NextFunction): void {
     if (!req.session?.jwt) {
-      throw new NotAuthorizedError('Token is not available. Please loggin again');
+      throw new NotAuthorizedError('Token is not available. Please loggin againss');
     }
 
     try {
       const payload: AuthPayload = JWT.verify(req.session?.jwt, config.JWT_TOKEN!) as AuthPayload;
       req.currentUser = payload;
     } catch (error) {
-      throw new NotAuthorizedError('Token is not  invalid. Please login again');
+      throw new NotAuthorizedError('Token is not  invalid. Please login agains');
     }
 
     next();
@@ -25,6 +25,7 @@ export class AuthMiddleware {
     if (!req.currentUser) {
       throw new NotAuthorizedError('Authentication is required to acces this route');
     }
+    next();
   }
 }
 

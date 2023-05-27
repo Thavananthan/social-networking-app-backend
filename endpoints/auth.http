@@ -9,9 +9,9 @@ Accept: application/json
 withCredentials: true
 
 {
-  "username": "manny",
-  "password": "qwerty",
-  "email": "manny@test.com",
+  "username": "nnan",
+  "password": "qwertysn",
+  "email": "osborne.stehr57@ethereal.email",
   "avatarColor": "blue",
   "avatarImage": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA0gAAAMyAQMAAABtkHM/AAAABlBMVEUAAAD///+l2Z/dAAAAAXRSTlMAQObYZgAAAAFiS0dEAf8CLd4AAABrSURBVBgZ7cGBAAAAAMOg+1NP4AjVAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjgBSwwABwrL8wAAAAABJRU5ErkJggg=="
 }
@@ -23,8 +23,8 @@ Accept: application/json
 withCredentials: true
 
 {
-  "username": "manny",
-  "password": "qwerty"
+  "username": "naananan",
+  "password": "qwertysn"
 }
 
 ###
@@ -38,3 +38,26 @@ GET {{BaseUrl}}/{{urlPath}}/currentuser
 Content-Type: application/json
 Accept: application/json
 withCredentials: true
+
+###
+POST {{BaseUrl}}/{{urlPath}}/forgot-password
+Content-Type: application/json
+Accept: application/json
+withCredentials: true
+
+{
+  "email": "osborne.stehr57@ethereal.email"
+}
+
+###
+POST {{BaseUrl}}/{{urlPath}}/reset-password/c8ce75ee98c84c261c6e4ecefdb407b7b209ab24
+Content-Type: application/json
+Accept: application/json
+withCredentials: true
+
+{
+  "password":"12345st@",
+  "confirmPassword":"12345st@"
+}
+
+

@@ -11,9 +11,8 @@ class CurrentUserRoutes {
 
   public routes(): Router {
     this.router.get('/currentuser', authMiddleware.checkAuthentication, CurrentUser.prototype.read);
-
     return this.router;
   }
 }
 
-export const currentUserRoute: CurrentUserRoutes = new CurrentUserRoutes();
+export const currentUserRoutes: CurrentUserRoutes = new CurrentUserRoutes();
