@@ -23,7 +23,7 @@ Accept: application/json
 withCredentials: true
 
 {
-  "post": "Post with image created",
+  "post": "first post",
   "bgColor": "#4aa1f3",
   "privacy": "Public",
   "gifUrl": "",
