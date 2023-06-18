@@ -25,19 +25,19 @@ withCredentials: true
 {}
 
 ###
-GET {{baseUrl}}/{{urlPath}}/post/reactions/62ea82366d7191261d4ff0de
+GET {{baseUrl}}/{{urlPath}}/post/reactions/648ec0fc48acb3a76fc2c32f
 Content-Type: application/json
 Accept: application/json
 withCredentials: true
 
 ###
-GET {{baseUrl}}/{{urlPath}}/post/single/reaction/username/Manny/62ea82366d7191261d4ff0de
+GET {{baseUrl}}/{{urlPath}}/post/single/reaction/username/nnan/62ea82366d7191261d4ff0de
 Content-Type: application/json
 Accept: application/json
 withCredentials: true
 
 ###
-GET {{baseUrl}}/{{urlPath}}/post/reactions/username/Danny
+GET {{baseUrl}}/{{urlPath}}/post/reactions/username/naananan
 Content-Type: application/json
 Accept: application/json
 withCredentials: true
