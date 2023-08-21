@@ -9,9 +9,9 @@ Accept: application/json
 withCredentials: true
 
 {
-  "username": "nnan",
+  "username": "nffffes",
   "password": "qwertysn",
-  "email": "osborne.stehr57@ethereal.email",
+  "email": "nfes@gmail.com",
   "avatarColor": "blue",
   "avatarImage": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA0gAAAMyAQMAAABtkHM/AAAABlBMVEUAAAD///+l2Z/dAAAAAXRSTlMAQObYZgAAAAFiS0dEAf8CLd4AAABrSURBVBgZ7cGBAAAAAMOg+1NP4AjVAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjgBSwwABwrL8wAAAAABJRU5ErkJggg=="
 }
@@ -23,7 +23,7 @@ Accept: application/json
 withCredentials: true
 
 {
-  "username": "naananan",
+  "username": "nffffes",
   "password": "qwertysn"
 }
 
