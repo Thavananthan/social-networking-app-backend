@@ -2,7 +2,7 @@
 @urlPath = api/v1
 
 ###
-PUT {{baseUrl}}/{{urlPath}}/user/follow/64e09c229e513519c8e0397a
+PUT {{baseUrl}}/{{urlPath}}/user/follow/64e09c239e513519c8e0397d
 Content-Type: application/json
 Accept: application/json
 withCredentials: true
@@ -30,7 +30,7 @@ Accept: application/json
 withCredentials: true
 
 ###
-PUT {{baseUrl}}/{{urlPath}}/user/block/62f29f71da585226216b2724
+PUT {{baseUrl}}/{{urlPath}}/user/block/64e09c239e513519c8e0397d
 Content-Type: application/json
 Accept: application/json
 withCredentials: true
@@ -38,7 +38,7 @@ withCredentials: true
 {}
 
 ###
-PUT {{baseUrl}}/{{urlPath}}/user/unblock/62f29f71da585226216b2724
+PUT {{baseUrl}}/{{urlPath}}/user/unblock/64e09c239e513519c8e0397d
 Content-Type: application/json
 Accept: application/json
 withCredentials: true
