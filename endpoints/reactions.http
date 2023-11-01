@@ -8,8 +8,8 @@ Accept: application/json
 withCredentials: true
 
 {
-  "userTo": "6471a2d8a28bf38b7b9684ec",
-  "postId": "64858248e5ea079d6b8a6bdf",
+   "userTo": "652234b36f34755f19356caf",
+  "postId": "652234cf6f34755f19356cb4",
   "type": "sad",
   "previousReaction": "",
   "postReactions": {"like": 0,"love": 0,"happy": 0,"sad": 1,"wow": 0,"angry": 0},

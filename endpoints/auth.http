@@ -9,9 +9,9 @@ Accept: application/json
 withCredentials: true
 
 {
-  "username": "nffffes",
+  "username": "cswsett",
   "password": "qwertysn",
-  "email": "nfes@gmail.com",
+  "email": "jo.beahan@ethereal.email",
   "avatarColor": "blue",
   "avatarImage": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA0gAAAMyAQMAAABtkHM/AAAABlBMVEUAAAD///+l2Z/dAAAAAXRSTlMAQObYZgAAAAFiS0dEAf8CLd4AAABrSURBVBgZ7cGBAAAAAMOg+1NP4AjVAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjgBSwwABwrL8wAAAAABJRU5ErkJggg=="
 }
@@ -23,7 +23,7 @@ Accept: application/json
 withCredentials: true
 
 {
-  "username": "nffffes",
+  "username": "cswsett",
   "password": "qwertysn"
 }
 
@@ -46,7 +46,7 @@ Accept: application/json
 withCredentials: true
 
 {
-  "email": "osborne.stehr57@ethereal.email"
+  "email": "jo.beahan@ethereal.email"
 }
 
 ###

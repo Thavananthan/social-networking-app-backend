@@ -1,4 +1,4 @@
-@baseUrl = http://localhost:5000
+@baseUrl = http://localhost:8000
 @urlPath = api/v1
 
 ###
@@ -8,8 +8,8 @@ Accept: application/json
 withCredentials: true
 
 {
-  "userTo": "62e539c0d8b514f6e42e3b5b",
-  "postId": "62ea82366d7191261d4ff0de",
+  "userTo": "6522339d6f34755f19356c9c",
+  "postId": "652234cf6f34755f19356cb4",
   "comment": "This is my second comment",
   "profilePicture": "https://res.cloudinary.com/dyamr9ym3/image/upload/v1659189696/62e539c0d8b514f6e42e3b5b"
 }
